@@ -18,7 +18,7 @@ import { SeedModule } from './seed/seed.module';
         if (dbType === 'postgres') {
           return {
             type: 'postgres',
-            url: configService.get<string>('NEON_DATABASE_URL'),
+            url: configService.get<string>('DATABASE_URL'),
             entities: [__dirname + '/**/*.entity{.ts,.js}'],
             synchronize: true,
             autoLoadEntities: true,
